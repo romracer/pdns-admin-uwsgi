@@ -19,7 +19,7 @@ RUN apk add --no-cache \
   && apk add --no-cache --virtual build-deps \
      gcc libc-dev python2-dev openssl-dev libxml2-dev xmlsec-dev curl \
   && mkdir -p /opt/powerdns-admin \
-  && curl -sSL https://github.com/thomasDOTde/PowerDNS-Admin/archive/master.tar.gz \
+  && curl -sSL https://codeload.github.com/thomasDOTde/PowerDNS-Admin/tar.gz/2018.03.28.1 \
      | tar -xzC /opt/powerdns-admin --strip 1 \
   && sed -i '/MySQL-python/d' /opt/powerdns-admin/requirements.txt \
   && sed -i '/python-ldap/d' /opt/powerdns-admin/requirements.txt \
